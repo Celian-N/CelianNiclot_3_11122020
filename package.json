@@ -7,9 +7,17 @@
   },
   "author": "Célian Niclot <celian.niclot@gmail.com>",
   "license": "ISC",
-  "description": "",
-  "repository": "https://github.com/Celian-N/CelianNiclot_3_11122020.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Celian-N/CelianNiclot_3_11122020.git"
+  },
   "dependencies": {
-    "sass": "^1.29.0"
-  }
+    "sass": "^1.30.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Celian-N/CelianNiclot_3_11122020/issues"
+  },
+  "homepage": "https://github.com/Celian-N/CelianNiclot_3_11122020#readme",
+  "devDependencies": {},
+  "description": ""
 }

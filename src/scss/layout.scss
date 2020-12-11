@@ -17,7 +17,16 @@ body {
   margin: 0;
   padding: 0;
   color: black;
+
   & h2 {
     font-family: "Shrikhand", sans-serif;
+  }
+  & h3 {
+    margin-left: 20px;
+  }
+  & h4 {
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 5px;
   }
 }
