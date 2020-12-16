@@ -134,6 +134,28 @@
   }
 }
 
+.heart {
+  & stop {
+    transition: stop-color 300ms;
+  }
+  &:hover {
+    & stop:first-child {
+      stop-color: $color-primary;
+    }
+    & stop:last-child {
+      stop-color: $color-secondary;
+    }
+    & > .heart__path {
+      stroke: transparent;
+      transform: scale(1.05);
+    }
+  }
+  &__path {
+    transition: transform 300ms;
+    stroke-width: 2;
+    stroke: black;
+  }
+}
 /*---FOOTER----*/
 .footer {
   background-color: rgba(black, 0.9);
