@@ -38,6 +38,11 @@
       border-radius: 50px;
       box-shadow: 0 5px 6px rgba(grey, 0.3);
       background: linear-gradient(345deg, $color-primary, $color-secondary);
+      transition: transform 300ms;
+      cursor: pointer;
+      &:hover {
+        transform: scale(0.95);
+      }
     }
   }
 }
