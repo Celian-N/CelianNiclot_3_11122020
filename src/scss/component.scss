@@ -1,5 +1,12 @@
 @import "variables.scss";
 
+/*---CONTAINER---*/
+.container {
+  overflow-y: hidden;
+  height: 0;
+  animation: appear 0ms 2s forwards;
+}
+
 /*---HEADER----*/
 
 .header {
@@ -389,5 +396,14 @@
   }
   to {
     height: 0px;
+  }
+}
+
+@keyframes appear {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
   }
 }
