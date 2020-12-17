@@ -217,6 +217,7 @@
   flex-direction: row;
   margin-bottom: 15px;
   border-radius: 15px;
+  box-shadow: 0 3px 7px rgba(grey, 0.3);
   overflow: hidden;
   cursor: pointer;
   &:hover > .menu_valid {
@@ -228,19 +229,19 @@
   &:hover > .menu__card {
     border-radius: 15px 0 0 15px;
   }
-}
-.menu_valid {
-  background-color: $color-tertiary;
-  width: 0px;
-  display: flex;
-  align-items: center;
-  transition: width 400ms;
+  & .menu_valid {
+    background-color: $color-tertiary;
+    width: 0px;
+    display: flex;
+    align-items: center;
+    transition: width 400ms;
 
-  & .fa-check-circle {
-    font-size: 22px;
-    margin: auto;
-    color: white;
-    transition: opacity 50ms;
+    & .fa-check-circle {
+      font-size: 22px;
+      margin: auto;
+      color: white;
+      transition: opacity 50ms;
+    }
   }
 }
 .menus {
@@ -271,7 +272,6 @@
     align-items: flex-end;
     background-color: white;
     padding: 0 15px;
-    box-shadow: 0 3px 6px rgba(grey, 0.3);
     width: 100%;
 
     &--descr {
@@ -321,5 +321,73 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  animation: shrink 300ms 2s linear forwards;
+
+  &_spinner {
+    margin-top: 40vh;
+    font-size: 10px;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: linear-gradient(
+      to right,
+      rgba($color-secondary, 1) 10%,
+      rgba($color-secondary, 0) 42%
+    );
+    animation: loading 2s linear forwards, shrink 0ms 2s linear forwards;
+    transform: translateZ(0);
+
+    &:before {
+      width: 50%;
+      height: 50%;
+      background: rgba($color-secondary, 0.7);
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+    }
+    &:after {
+      background: white;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: "";
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shrink {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0px;
   }
 }
