@@ -8,11 +8,18 @@
   box-shadow: 0 2px 2px rgba(grey, 0.5);
   z-index: 10;
 }
-.fa-arrow-left {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.return_arrow {
+  color: black;
+  .fa-arrow-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  &:visited {
+    color: black;
+  }
 }
+
 /*---EXPLORE----*/
 .explore {
   display: flex;
@@ -42,9 +49,10 @@
       border-radius: 50px;
       box-shadow: 0 5px 6px rgba(grey, 0.3);
       background: linear-gradient(345deg, $color-primary, $color-secondary);
-      transition: transform 300ms;
+      transition: all 300ms;
       cursor: pointer;
       &:hover {
+        filter: brightness(1.1);
         transform: scale(0.95);
       }
     }
@@ -192,7 +200,7 @@
 
 /*-----Restaurant----*/
 
-aside {
+.image {
   width: 100%;
   & img {
     width: inherit;
@@ -298,9 +306,10 @@ aside {
     border-radius: 50px;
     box-shadow: 0 5px 6px rgba(grey, 0.3);
     background: linear-gradient(345deg, $color-primary, $color-secondary);
-    transition: transform 300ms;
+    transition: all 300ms;
     cursor: pointer;
     &:hover {
+      filter: brightness(1.1);
       transform: scale(0.95);
     }
   }
