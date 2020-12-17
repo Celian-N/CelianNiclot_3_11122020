@@ -216,8 +216,9 @@
 
 .menus-section {
   border-radius: 40px 40px 0 0;
-  background-color: rgba(grey, 0.2);
+  background-color: rgb(230, 230, 230);
   padding: 15px 5vw;
+  transform: translateY(-4rem);
 }
 .backcard {
   display: flex;
@@ -228,17 +229,17 @@
   overflow: hidden;
   cursor: pointer;
   &:hover > .menu_valid {
-    width: 100px;
+    width: 25%;
     & .fa-check-circle {
       animation: addRotation 400ms 0s ease-in-out forwards;
     }
   }
   &:hover > .menu__card {
-    border-radius: 15px 0 0 15px;
+    width: 75%;
   }
   & .menu_valid {
     background-color: $color-tertiary;
-    width: 0px;
+    width: 0%;
     display: flex;
     align-items: center;
     transition: width 400ms;
@@ -278,13 +279,13 @@
     justify-content: space-between;
     align-items: flex-end;
     background-color: white;
-    padding: 0 15px;
     width: 100%;
-
+    transition: width 400ms;
     &--descr {
       width: 80%;
     }
     &--main {
+      padding: 0 15px;
       font-weight: bold;
       white-space: nowrap;
       overflow: hidden;
@@ -296,7 +297,9 @@
       font-weight: normal;
     }
     &--price {
+      width: 20%;
       font-weight: bold;
+      font-size: 0.9em;
     }
   }
 
