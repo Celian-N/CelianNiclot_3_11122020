@@ -226,7 +226,19 @@
   background-color: rgb(230, 230, 230);
   padding: 15px 5vw;
   transform: translateY(-4rem);
+  margin-bottom: -4rem;
 }
+
+.card__appear {
+  transform: translateY(20px);
+  animation: card_appear $anim-dur both ease-in-out;
+  @for $i from 1 through $num-bars {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
+}
+
 .backcard {
   display: flex;
   flex-direction: row;
@@ -259,6 +271,7 @@
     }
   }
 }
+
 .menus {
   & .meal__title {
     margin-top: 40px;
@@ -415,5 +428,16 @@
   }
   to {
     height: auto;
+  }
+}
+
+@keyframes card_appear {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
