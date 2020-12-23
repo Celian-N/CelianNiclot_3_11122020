@@ -3,12 +3,6 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $gradient: linear-gradient($color-primary, $color-secondary);
 
-html {
-  --color-primary: #9356dc;
-  --color-secondary: #ff79da;
-  --color-tertiary: #99e2d0;
-}
-
 $num-bars: 13;
 $anim-dur: 1s;
 $anim-delay: $anim-dur / $num-bars;
